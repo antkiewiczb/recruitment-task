@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+}
+.card {
+	position: relative;
+	margin: 10px;
+	height: 400px;
+	width: 300px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+	overflow: hidden;
+}
+.card__colors {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	position: absolute;
+	right: -15px;
+	width: 54px;
+	height: 180px;
+}
+.card__colors .color {
+	display: flex;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.card__colors-one {
+	background-color: rgb(71, 79, 89);
+}
+.card__colors-two {
+	background-color: rgb(119, 85, 89);
+}
+.card__colors-three {
+	background-color: rgb(1, 40, 64);
+}
+.card__colors-four {
+	background-color: rgb(1, 64, 58);
+}
+.card .card__title h1 {
+	font-size: 3.2rem;
+	padding-top: 4.8rem;
+}
+.card .card__title .card__title_btn {
+	background: none;
+	border: none;
+	color: rgb(0, 0, 0);
+	font-size: 2rem;
+	z-index: 2;
+}
+.card .card__title .card__title_btn .fa-circle-info {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	padding: 0.8rem;
+	cursor: help;
+	color: #0d0d0d;
+}
+.fa-circle-info:hover ~ .card__title-info {
+	clip-path: circle(70% at 50% 90%);
+	z-index: 1;
+}
+.card .card__title .card__title_btn .fa-heart {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	padding: 0.8rem;
+	cursor: pointer;
+}
+.fa-heart-red {
+	color: red;
+}
+.card__img img {
+	width: 200px;
+	height: 200px;
+}
+.card__img:hover .card__img-hover {
+	opacity: 1;
+	cursor: pointer;
+}
+.card__img-hover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 60%;
+	left: 25%;
+	width: 55%;
+	height: 10%;
+	background-color: rgba(13, 81, 140, 0.75);
+	color: white;
+	content: 'Zobacz produkt';
+	opacity: 0;
+	transition: 0.5s ease;
+	font-size: 1.4rem;
+}
+.card__text .card__text-price {
+	font-size: 3rem;
+	padding: 0.5rem 0.5rem;
+}
+.card__btn {
+	width: 220px;
+	height: 40px;
+	background-color: rgba(23, 99, 164, 0.9);
+	font-size: 2rem;
+	color: white;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+}
+.card__title-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	font-size: 1.4rem;
+	padding: 5rem 1rem;
+	background-color: rgba(13, 81, 140, 0.9);
+	color: white;
+	clip-path: circle(0 at 50% 90%);
+	transition: clip-path 0.8s;
+}
