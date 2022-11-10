@@ -77,6 +77,10 @@ body {
 	clip-path: circle(70% at 50% 90%);
 	z-index: 1;
 }
+.hover {
+	clip-path: circle(70% at 50% 90%);
+	z-index: 1;
+}
 .card .card__title .card__title_btn .fa-heart {
 	position: absolute;
 	top: 5px;

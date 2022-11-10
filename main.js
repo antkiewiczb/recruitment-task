@@ -5,6 +5,8 @@ const btnBlue = document.querySelector('.card__colors-three');
 const btnGreen = document.querySelector('.card__colors-four');
 const heart = document.querySelector('.fa-heart');
 const btnHeart = document.querySelector('.heart');
+const btnInfo = document.querySelector('.fa-circle-info');
+const info = document.querySelector('.fa-circle-info');
 
 btnGray.addEventListener('click', () => {
 	img.setAttribute('src', './img/fotel-voss-grey.png');
@@ -26,4 +28,8 @@ btnGreen.addEventListener('click', () => {
 
 btnHeart.addEventListener('click', () => {
 	heart.classList.toggle('fa-heart-red');
+});
+
+btnInfo.addEventListener('click', () => {
+	info.classList.toggle('hover-img');
 });
